@@ -2,18 +2,18 @@ package ngomediator.ngomediatorapi.model;
 
 public class Post {
     private String title;
-    private String discription;
+    private String description;
 
-    public Post(String title, String discription) {
+    public Post(String title, String description) {
         this.title = title;
-        this.discription = discription;
+        this.description = description;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public String getDiscription() {
-        return discription;
+    public String getDescription() {
+        return description;
     }
 }

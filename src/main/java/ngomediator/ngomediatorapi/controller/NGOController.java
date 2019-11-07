@@ -1,6 +1,8 @@
 package ngomediator.ngomediatorapi.controller;
 
+import javafx.geometry.Pos;
 import ngomediator.ngomediatorapi.model.NGO;
+import ngomediator.ngomediatorapi.model.Post;
 import ngomediator.ngomediatorapi.mongorepository.NGORepository;
 import org.springframework.web.bind.annotation.*;
 
@@ -73,4 +75,20 @@ public class NGOController {
             return null;
         }
     }
+
+
+    // Add Post
+
+    @PutMapping("/post")
+    public NGO insert(@RequestParam String email,@RequestParam String title,@RequestParam String description){
+        NGO ngo = this.ngoRepository.findByEmail(email);
+
+        List<Post> posts = ngo.getPosts();
+        posts.add(new Post(title,description));
+
+        this.ngoRepository.save(ngo);
+        return ngo;
+    }
+
+
 }
