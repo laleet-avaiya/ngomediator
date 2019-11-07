@@ -7,6 +7,8 @@ import java.util.Date;
 
 @Document(collection = "user")
 public class User {
+
+
     @Id
     private String id;
     private String name;
@@ -21,6 +23,10 @@ public class User {
         this.email = email;
         this.password = password;
         this.date_of_birth = date_of_birth;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName() {
