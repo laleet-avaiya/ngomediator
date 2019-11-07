@@ -24,6 +24,10 @@ public class UserController {
 
     @PostMapping()
     public User update(@RequestBody User user){
+
+        User old_user = this.userRepository.findByEmail(user.getEmail());
+        user.setPassword(old_user.getPassword());
+
         this.userRepository.save(user);
         return user;
     }
