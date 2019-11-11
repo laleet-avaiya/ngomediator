@@ -6,6 +6,7 @@ public class Donation {
     private String user_id;
     private float amount;
     private Date donate_on;
+    private String payment_mode;
 
     public Donation(String user_id, float amount, Date donate_on) {
         this.user_id = user_id;

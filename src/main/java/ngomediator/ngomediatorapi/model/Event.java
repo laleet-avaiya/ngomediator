@@ -7,8 +7,6 @@ public class Event {
     private String title;
     private String description;
     private Date event_on;
-
-
     private List<Volunteer> volunteers;
 
     public Event(String title, String description, Date event_on, List<Volunteer> volunteers) {

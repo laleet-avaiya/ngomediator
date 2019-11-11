@@ -3,6 +3,8 @@ package ngomediator.ngomediatorapi.dbseeder;
 
 import ngomediator.ngomediatorapi.model.Address;
 import ngomediator.ngomediatorapi.model.Admin;
+
+import javafx.application.Application;
 import ngomediator.ngomediatorapi.model.NGO;
 import ngomediator.ngomediatorapi.model.User;
 import ngomediator.ngomediatorapi.mongorepository.AdminRepository;
